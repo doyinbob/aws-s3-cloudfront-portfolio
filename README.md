@@ -58,15 +58,31 @@ This project strengthened my understanding of secure cloud hosting, access manag
 - Automate deployments through GitHub Actions.
 - Configure custom domain support.
 - Add monitoring and alerting.
-cat > .gitignore <<'EOF'
-.env
-.env.*
-!.env.example
-.aws/
-*.pem
-*.key
-*.log
-__pycache__/
-.DS_Store
-EOF
 
+## Project Verification
+
+The deployment was tested against the following security requirements:
+
+- The website loads successfully through its CloudFront distribution.
+- HTTPS is used to deliver website content.
+- The S3 bucket is not publicly accessible.
+- S3 Block Public Access is enabled.
+- CloudFront Origin Access Control (OAC) is configured.
+- The S3 bucket policy restricts object access to the authorised CloudFront distribution.
+
+## Project Outcome
+
+Successfully deployed a secure static portfolio website using Amazon S3 and CloudFront. This project provided practical experience with AWS CLI, cloud storage, content delivery, IAM, access control, Linux and Git version control.
+
+## Cost Management
+
+The project uses a lightweight static website architecture. AWS usage and billing should be monitored regularly, including S3 storage and requests, CloudFront requests and data transfer.
+
+## Repository Structure
+
+- `index.html` — Website content
+- `style.css` — Website styling
+- `script.js` — JavaScript functionality
+- `README.md` — Project documentation
+- `PROJECT_NOTES.md` — Additional project notes
+- `.gitignore` — Files excluded from version control
